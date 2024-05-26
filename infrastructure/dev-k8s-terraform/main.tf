@@ -95,20 +95,6 @@ resource "aws_security_group" "petclinic-kube-master-sg" {
 
   ingress {
     protocol = "tcp"
-    from_port = 10257
-    to_port = 10257
-    self = true
-  }
-
-  ingress {
-    protocol = "tcp"
-    from_port = 10259
-    to_port = 10259
-    self = true
-  }
-
-  ingress {
-    protocol = "tcp"
     from_port = 30000
     to_port = 32767
     cidr_blocks = ["0.0.0.0/0"]
